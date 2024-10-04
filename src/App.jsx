@@ -1,6 +1,6 @@
 import "./App.css";
 
-import { useEffect, useState } from "react";
+// import { useEffect, useState } from "react";
 import CookieCounter from "./components/CookieCounter";
 import UpgradesContainer from "./components/UpgradesContainer";
 import upgradeData from "./lib/upgradeData.json";

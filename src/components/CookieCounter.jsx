@@ -8,7 +8,6 @@ export default function CookieCounter() {
     const cookiesPerSecondInterval = setInterval(() => {
       setCookies((myCookieCount) => myCookieCount + cookiesPerSecond);
     }, 1000);
-    console.log(setCookies);
     return () => {
       clearInterval(cookiesPerSecondInterval);
     };
