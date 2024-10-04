@@ -15,3 +15,11 @@
 - Apply setInterval to execute periodic tasks within the application.
 - Use the .map() function to render lists of items in the application dynamically.
 - Use logic to manage the purchase and application of upgrade items within the game.
+
+# Reflection
+
+## Required
+
+- What requirements did you achieve?
+- Were there any requirements or goals that you were unable to achieve?
+- If so, what was it that you found difficult about these tasks?
