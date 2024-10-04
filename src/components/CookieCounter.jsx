@@ -11,7 +11,7 @@ export default function CookieCounter() {
     <>
       <img src={cookie} alt="cartoon cookie image" onClick={handleClick} />
 
-      <p>{myCookieCount} cookies.</p>
+      <p>{myCookieCount} cookies - number of times clicked.</p>
     </>
   );
 }
