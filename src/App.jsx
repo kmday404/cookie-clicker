@@ -1,6 +1,6 @@
 import "./App.css";
 
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import CookieCounter from "./components/CookieCounter";
 import UpgradesContainer from "./components/UpgradesContainer";
 import upgradeData from "./lib/upgradeData.json";
@@ -8,15 +8,13 @@ import upgradeData from "./lib/upgradeData.json";
 export default function App() {
   const [cookies, setCookies] = useState(0);
   const [cookiesPerSecond, setCookiesPerSecond] = useState(1);
-  // const [myCookieCount, setMyCookierCount] = useState(0);
+  const [myCookieCount, setMyCookieCount] = useState(0);
 
-  // function handlePurchase() {
-  //   completePurchase(cookies >= cost);
   const handleUpgradePurchase = (cost, increase) =>
     cookies >= cost &&
     (setCookies(cookies - cost),
     setCookiesPerSecond(cookiesPerSecond + increase));
-  // }
+
   return (
     <>
       <h1>Cookie Clicker</h1>
@@ -24,6 +22,8 @@ export default function App() {
         cookies={cookies}
         setCookies={setCookies}
         cookiesPerSecond={cookiesPerSecond}
+        myCookieCount={myCookieCount}
+        setMyCookieCount={setMyCookieCount}
       />
       {upgradeData.map((shop) => {
         return (
@@ -39,7 +39,6 @@ export default function App() {
           </div>
         );
       })}
-      <p>{cookies}</p>
     </>
   );
 }

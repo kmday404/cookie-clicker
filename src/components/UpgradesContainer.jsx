@@ -1,6 +1,8 @@
 import { useState } from "react";
 
 export default function UpgradesContainer(props) {
+  // useEffect(() => {
+
   //purchse upgrades - reduces total cookkies, increases CPS
   const [completePurchase, setCompletePurchase] = useState(false);
 

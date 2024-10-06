@@ -5,10 +5,12 @@ export default function CookieCounter({
   cookies,
   setCookies,
   cookiesPerSecond,
+  myCookieCount,
+  setMyCookieCount,
 }) {
-  //parent is passed to child ...? moved to App.jsx
-  // const [cookies, setCookies] = useState(0);
-  // const [cookiesPerSecond, setCookiesPerSecond] = useState(1);
+  function handleClick() {
+    setMyCookieCount(myCookieCount + 1);
+  }
   useEffect(() => {
     const cookiesPerSecondInterval = setInterval(() => {
       setCookies((myCookieCount) => myCookieCount + cookiesPerSecond);
@@ -18,11 +20,12 @@ export default function CookieCounter({
     };
   }, [cookiesPerSecond]);
 
-  const [myCookieCount, setMyCookierCount] = useState(0);
+  // const [myCookieCount, setMyCookierCount] = useState(0);
 
-  function handleClick() {
-    setMyCookierCount(myCookieCount + 1);
-  }
+  // function handleClick() {
+  //   setMyCookieCount(myCookieCount + 1);
+  // }
+
   return (
     <>
       <img src={cookie} alt="cartoon cookie image" onClick={handleClick} />
