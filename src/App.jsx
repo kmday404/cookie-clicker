@@ -32,6 +32,7 @@ export default function App() {
               name={shop.name}
               cost={shop.cost}
               increase={shop.increase}
+              image={shop.img}
               cookies={cookies}
               cookiesPerSecond={cookiesPerSecond}
               onPurchase={handleUpgradePurchase}
