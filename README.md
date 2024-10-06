@@ -9,17 +9,43 @@
 
 # Requirements
 
-- Implement the useState hook.
-- Use useEffect effectively.
-- Return JSX from a source other than App.jsx, for example, by using components.
-- Apply setInterval to execute periodic tasks within the application.
-- Use the .map() function to render lists of items in the application dynamically.
-- Use logic to manage the purchase and application of upgrade items within the game.
+- Implement the useState hook.  
+  Completed.
+- Use useEffect effectively.  
+  Used useEffect.
+- Return JSX from a source other than App.jsx, for example, by using components.  
+  Completed.
+- Apply setInterval to execute periodic tasks within the application.  
+  Completed.
+- Use the .map() function to render lists of items in the application dynamically.  
+  Completed.
+- Use logic to manage the purchase and application of upgrade items within the game.  
+  Completed. If the cookies in state are high enough the purchase options do reduce the number of cookies and increase ccokies per second.
 
 # Reflection
 
-## Required
+I struggled updating the state of the total cookies and I think this blocked me from using the local storage effectively. I do have some commented out code.  
+I also couldn't figure out how to get my upgrades to go into a row. Which container to style to move them all. I did add some media queries but I was hopeful the basics would match my wireframe more before applying those.
 
-- What requirements did you achieve?
-- Were there any requirements or goals that you were unable to achieve?
-- If so, what was it that you found difficult about these tasks?
+Rendered link: https://cookie-clicker-w80b.onrender.com  
+ ![screenshot of wireframe](./public/images/cookie-clicker-wireframe.png)
+
+My MVPs were:
+
+- click to increase cookies button functional
+- upgrade purchases displaying
+- upgrade purchase buttons working and logic in place (to reduce total cookies and increase cookies per second)
+- local storage for total cookies and cookies per second
+- media queries
+
+My stretch goals:
+
+- To have the images of the upgrades appear above the list of upgrades (when they are purchased) with a counter of how many are owned next to it.
+
+Resources used:
+
+- https://www.freecodecamp.org/news/how-to-use-localstorage-with-react-hooks-to-set-and-get-items/
+- W3 schools - ternary operators
+- Peers
+- previous class topics
+- I made an inital 'To Do' list on trello but I didn't follow up with moving them to 'Doing' and then 'Done'.
