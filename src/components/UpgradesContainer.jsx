@@ -1,26 +1,35 @@
 import { useState } from "react";
 
-export default function UpgradesContainer(
-  props,
-  { cookies, cookiesPerSecond, cost }
-) {
+export default function UpgradesContainer(props) {
   //purchse upgrades - reduces total cookkies, increases CPS
   const [completePurchase, setCompletePurchase] = useState(false);
 
   function handlePurchase() {
-    completePurchase(cookies >= cost);
+    // const completePurchase = props.cookies >= props.cost;
+    // setCompletePurchase(completePurchase);
+    setCompletePurchase(props.cookies >= props.cost),
+      props.cookies >= props.cost &&
+        props.onPurchase(props.cost, props.increase);
+
+    // completePurchase ? (
+    //   <>
+    //     {props.cookies} - {props.cost}
+    //     {props.cookiesPerSecond} + {props.increase}
+    //   </>
+    // ) : null;
   }
 
   return (
     <>
       <p>{props.name}</p>
-      <button onClick={handlePurchase}>Cost: {props.cost}</button>
+      <button onClick={handlePurchase}>Cost: {props.cost} cookies</button>
       <p>Increase: {props.increase} cookies per second</p>
-      {completePurchase ? (
+      {/* {completePurchase ? (
         <>
-          (cookies - {props.cost}) ({cookiesPerSecond} + {props.increase})
+          {props.cookies} - {props.cost}
+          {props.cookiesPerSecond} + {props.increase}
         </>
-      ) : null}
+      ) : null} */}
     </>
   );
 }
