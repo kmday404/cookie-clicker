@@ -13,7 +13,7 @@ export default function CookieCounter({
     setMyCookieCount(myCookieCount + 1);
   }
   useEffect(() => {
-    localStorage.setItem("cookiesPerSecond", JSON.stringify(cookiesPerSecond));
+    // localStorage.setItem("cookiesPerSecond", JSON.stringify(cookiesPerSecond));
     // localStorage.setItem("cookies", JSON.stringify(cookies));
 
     // JSON.parse(localStorage.getItem("cookies"));
