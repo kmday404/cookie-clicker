@@ -9,6 +9,9 @@ export default function App() {
   const [cookies, setCookies] = useState(0);
   const [cookiesPerSecond, setCookiesPerSecond] = useState(1);
   // const [myCookieCount, setMyCookierCount] = useState(0);
+  function handlePurchase() {
+    completePurchase(cookies >= cost);
+  }
   return (
     <>
       <h1>Cookie Clicker</h1>
@@ -16,6 +19,7 @@ export default function App() {
         cookies={cookies}
         setCookies={setCookies}
         cookiesPerSecond={cookiesPerSecond}
+        cost={cost}
       />
       {upgradeData.map((shop) => {
         return (
