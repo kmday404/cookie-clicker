@@ -23,11 +23,15 @@ export default function UpgradesContainer(props) {
   }
 
   return (
-    <div id={props.divid}>
+    <div className="upgrade-container">
       <p className="upgrade-name">{props.name}</p>
-      <button onClick={handlePurchase}>Cost: {props.cost} cookies</button>
-      <p>Increase: {props.increase} cookies per second</p>
+      <p className="upgrade-increase">
+        Increase: {props.increase} cookies per second
+      </p>
       <img src={props.image} height={100} width={100} />
+      <button className="upgrade-button" onClick={handlePurchase}>
+        Cost: {props.cost} cookies
+      </button>
       {/* {completePurchase ? (
         <>
           {props.cookies} - {props.cost}

@@ -6,8 +6,10 @@ import UpgradesContainer from "./components/UpgradesContainer";
 import upgradeData from "./lib/upgradeData.json";
 
 export default function App() {
+  const storedItems = JSON.parse(localStorage.getItem("cookiesPerSecond"));
+  // console.log(localStorage);
   const [cookies, setCookies] = useState(0);
-  const [cookiesPerSecond, setCookiesPerSecond] = useState(1);
+  const [cookiesPerSecond, setCookiesPerSecond] = useState(storedItems);
   const [myCookieCount, setMyCookieCount] = useState(0);
 
   const handleUpgradePurchase = (cost, increase) =>

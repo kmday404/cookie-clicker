@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import cookie from "../../public/images/cookie.png";
+import "./CookieCounter.css";
 
 export default function CookieCounter({
   cookies,
@@ -12,6 +13,11 @@ export default function CookieCounter({
     setMyCookieCount(myCookieCount + 1);
   }
   useEffect(() => {
+    localStorage.setItem("cookiesPerSecond", JSON.stringify(cookiesPerSecond));
+    // localStorage.setItem("cookies", JSON.stringify(cookies));
+
+    // JSON.parse(localStorage.getItem("cookies"));
+
     const cookiesPerSecondInterval = setInterval(() => {
       setCookies((myCookieCount) => myCookieCount + cookiesPerSecond);
     }, 1000);
@@ -28,7 +34,12 @@ export default function CookieCounter({
 
   return (
     <>
-      <img src={cookie} alt="cartoon cookie image" onClick={handleClick} />
+      <img
+        className="cookie-image"
+        src={cookie}
+        alt="cartoon cookie image"
+        onClick={handleClick}
+      />
 
       <p>Total cookies: {myCookieCount + cookies}</p>
       <p>Cookies per second: {cookiesPerSecond}</p>
